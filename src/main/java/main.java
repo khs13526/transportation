@@ -24,15 +24,24 @@ public class main {
         bus1.changeGasamount(-55);
         System.out.println("=====================택시 운행 시작=================");
         // 택시 인스턴스 생성
-        Taxi taxi1 = new Taxi(1948, "서울역", 2);
-        Taxi taxi2 = new Taxi (4578, "어린이 대공원", 3);
+        Taxi taxi1 = new Taxi(1948);
+        Taxi taxi2 = new Taxi (4578);
         // 택시 운행 시작
-        System.out.println("=====================1948 택시 운행 시작=================");
         taxi2.getStarted();
         taxi1.getStarted();
+        System.out.println("=====================1948 택시 운행 시작=================");
         // 택시 승객 탑승
+        taxi1.setDestination("서울역");
+        taxi1.setDistance(2);
+        taxi1.takeCustomer(2);
         // 택시 요금 결제
-
-
+        taxi1.changeGasamount(-80);
+        taxi1.payPrice();
+        taxi1.takeCustomer(5);
+        taxi1.setDestination("구로지디털단지역");
+        taxi1.setDistance(12);
+        taxi1.takeCustomer(3);
+        taxi1.changeGasamount(-20);
+        taxi1.payPrice();
     }
 }

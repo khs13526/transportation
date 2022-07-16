@@ -41,7 +41,15 @@ public class transportation {
         this.gasAmount += a;
         System.out.println("남은 주유량은 " + this.gasAmount + "입니다.");
         if (this.gasAmount < 10) {
+            if ( this.gasAmount ==0 ){
+                this.state = "운행불가";
+                System.out.println(this.state);
+            }
             System.out.println("주유 필요");
         }
+    }
+
+    public void takeCustomer(int a) {
+
     }
 }

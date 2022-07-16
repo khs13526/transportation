@@ -10,6 +10,7 @@ public class Bus extends transportation{
         this.price = 1000;
     }
 
+    @Override
     public void takeCustomer(int a) {
         this.currentPassenger += a;
         if( maxPassenger - currentPassenger >= 0) {
