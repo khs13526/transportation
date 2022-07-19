@@ -40,6 +40,7 @@ public class Taxi extends transportation implements transportationImpl {
     }
     @Override
     public void takeCustomer(int a) {
+        System.out.println("승객 " + a + "명 탑승");
         this.currentPassenger += a;
         this.payPrice = (this.basePrice + this.pricePerDistance * (this.distance - this.baseDistance));
         this.state = "운행중";

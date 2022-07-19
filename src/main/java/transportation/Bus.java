@@ -13,6 +13,7 @@ public class Bus extends transportation implements transportationImpl {
     @Override
     public void takeCustomer(int a) {
         this.currentPassenger += a;
+        System.out.println("승객 " + a + "명 탑승");
         if( maxPassenger - currentPassenger >= 0) {
         System.out.println("남은 탑승가능 승객 수는 " + (maxPassenger - currentPassenger) + "입니다.");
         System.out.println("요금은 " + this.price * a + "입니다.");

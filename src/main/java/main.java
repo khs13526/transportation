@@ -1,6 +1,17 @@
 import transportation.Bus;
 import transportation.Taxi;
 
+ enum StateType {
+    RUNNING("운행중"),
+    GARAGE("차고지행");
+    private final String state;
+    private StateType(String s) {
+        this.state = s;
+    }
+    public String getName() {
+        return this.state;
+    }
+}
 public class main {
     public static void main(String[] args) {
         //버스 인스턴스 생성
@@ -14,9 +25,9 @@ public class main {
         bus1.takeCustomer(2);
         // 버스 주유량, 상태 변경
         bus1.changeGasamount(-50);
-        bus1.changeState("차고지행");
+        bus1.changeState(StateType.GARAGE.getName());
         bus1.changeGasamount(10);
-        bus1.changeState("운행중");
+        bus1.changeState(StateType.RUNNING.getName());
         // 가능 인원 초과 ... 현재승객 초기화..?
         bus1.takeCustomer(45);
         bus1.takeCustomer(5);
