@@ -1,6 +1,6 @@
 package transportation;
 
-public class Taxi extends transportation{
+public class Taxi extends transportation implements transportationImpl {
 
 
     String destination;

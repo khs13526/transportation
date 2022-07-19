@@ -1,6 +1,6 @@
 package transportation;
 
-public class Bus extends transportation{
+public class Bus extends transportation implements transportationImpl {
     int currentPassenger;
     int price;
 
